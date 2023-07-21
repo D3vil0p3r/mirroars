@@ -1,5 +1,12 @@
 # Mirroars - Get the fastest mirrors from all mirrorlists!
 
+## Dependencies
+Install the following dependencies:
+```
+sudo pacman -S parallel
+```
+
+## Usage
 ```
 As rankmirrors, it ranks pacman mirrors by their connection and opening speed and update the related files. Pacman mirror files
 are located in /etc/pacman.d/. It can also rank one mirror if the URL is provided.
