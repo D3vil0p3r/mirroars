@@ -22,13 +22,10 @@
 trap finaloutput INT
 
 declare -r myname='mirroars'
-declare -r myver='1.0.1'
 declare -r arguments="$@"
 
 usage() {
 	cat <<EOF
-${myname} v${myver}
-
 As rankmirrors, it ranks pacman mirrors by their connection and opening speed and update the related files. Pacman mirror files
 are located in /etc/pacman.d/. It can also rank one mirror if the URL is provided.
 
@@ -47,6 +44,10 @@ Options:
   -w, --update          update mirrorlist file sorted by faster mirrors
   -h, --help            display this help message and exit
   -V, --version         display version information and exit
+
+Examples:
+sudo mirroars -n 21 -m 15 -p -t -w -r blackarch /etc/pacman.d/blackarch-mirrorlist
+sudo mirroars -n 21 -m 15 -p -t -w -r chaotic-aur /etc/pacman.d/chaotic-mirrorlist
 EOF
 	exit 0
 }
